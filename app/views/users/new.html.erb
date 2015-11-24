@@ -1,0 +1,21 @@
+<% provide(:title, 'Cadastre-se') %>
+<h3>Cadastre-se</h3>
+
+<div class="row" style="margin-bottom:50px;">
+  <div class="col-md-6 col-md-offset-3">
+    <%= form_for(@user) do |f| %>
+        <%= f.label :name, "Nome" %>
+        <%= f.text_field :name , class:"form-control" %>
+
+        <%= f.label :email, "Email" %>
+        <%= f.email_field :email, class:"form-control" %>
+
+        <%= f.label :password, "Senha, 2 vezes" %>
+        <%= f.password_field :password, class:"form-control" %>
+
+        <%= f.password_field :password_confirmation, class:"form-control", style:"margin-top:10px;" %>
+
+        <%= f.submit "Criar Usuario", class: "btn btn-primary pull-right", style:"margin-top:10px;" %>
+    <% end %>
+  </div>
+</div>
