@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/project.iml" filepath="$PROJECT_DIR$/.idea/project.iml" />
-      <module fileurl="file://$PROJECT_DIR$/../.idea/rubyTraining.iml" filepath="$PROJECT_DIR$/../.idea/rubyTraining.iml" />
     </modules>
   </component>
 </project>
