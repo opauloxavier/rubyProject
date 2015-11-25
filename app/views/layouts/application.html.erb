@@ -31,8 +31,7 @@
                 <%= gravatar_for current_user,size:30 %><b><%= current_user.name%> </b><b class="caret"></b>
               </a>
               <ul class="dropdown-menu">
-                <li><%= link_to "Perfil", current_user %></li>
-                <li><%= link_to "Opcoes", '#' %></li>
+                <li><%= link_to "Opçoes", edit_user_path(current_user) %></li>
                 <li class="divider"></li>
                 <li>
                   <%= link_to "Sair", logout_path, method: "delete" %>
@@ -40,7 +39,8 @@
               </ul>
             </li>
         <% else %>
-            <li><%= link_to "Log in", login_path %></li>
+            <li><%= link_to "Entrar", login_path %></li>
+            <li><%= link_to "Cadastrar", cadastro_path %></li>
         <% end %>
       </ul>
         </li>
