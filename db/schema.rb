@@ -11,7 +11,24 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151125014345) do
+ActiveRecord::Schema.define(version: 20151125230904) do
+
+  create_table "artists", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+    t.integer  "generos_id", limit: 4
+  end
+
+  add_index "artists", ["generos_id"], name: "index_artists_on_generos_id", using: :btree
+
+  create_table "generos", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  add_index "generos", ["name"], name: "index_generos_on_name", unique: true, using: :btree
 
   create_table "users", force: :cascade do |t|
     t.string   "name",            limit: 255

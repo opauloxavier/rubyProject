@@ -1,8 +1,12 @@
 Rails.application.routes.draw do
   get 'sessions/new'
-
   get 'users/new'
+  get 'generos/new'
+  get 'artists/new'
+
   resources :users
+  resources :generos
+  resources :artists, param: :name
   root 'static_pages#home'
 
   get 'home' => 'static_pages#home'

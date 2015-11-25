@@ -1,0 +1,14 @@
+
+<% provide(:title, "Criar Genero")%>
+<h3 class="text-center">Criar Genero</h3>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 min-600">
+    <%= form_for(:generos, url:generos_path) do |f| %>
+        <%= f.label "Nome do Gênero" %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.submit 'Criar Gênero', class: "btn btn-primary pull-right", style:"margin-top:10px;"%>
+
+    <% end %>
+  </div>
+</div>

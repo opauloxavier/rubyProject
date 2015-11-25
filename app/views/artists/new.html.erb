@@ -1,0 +1,17 @@
+
+<% provide(:title, "Inserir Artista")%>
+<h3 class="text-center">Inserir Artista</h3>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 min-600">
+    <%= form_for(:artists, url:artists_path) do |f| %>
+        <%= f.label "Nome do Artista" %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label "Genero do Artista" %>
+        <%= f.collection_select :generos_id, Genero.order(:name),:id,:name, {}, include_blank: "Selecione um genero", class: "form-control" %>
+
+        <%= f.submit 'Criar Artista', class: "btn btn-primary pull-right", style:"margin-top:10px;"%>
+
+    <% end %>
+  </div>
+</div>
