@@ -1,0 +1,29 @@
+<%= provide(:title, "Todos os Artistas");%>
+<div class="col-md-12">
+  <legend>Todos os Artistas</legend>
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-striped text-center" style="margin-top: 30px;" >
+      <tr>
+        <th class="text-center"> Artista </th>
+        <th class="text-center"> Genero </th>
+        <th class="text-center"> Avaliação Média </th>
+        <th class="text-center"> Favorito </th>
+      </tr>
+      <% @artist.each do |artist| %>
+      <tr>
+
+        <td><%= link_to artist.name.titleize,("/artists/"+artist.name.to_param)%></a></td>
+        <td><%=Genero.find(artist.generos_id).name%></td>
+        <td> <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        </td>
+        <td><a href='#' class='btn btn-danger'><i class='glyphicon glyphicon-heart'></i></a>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>

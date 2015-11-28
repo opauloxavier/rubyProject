@@ -59,3 +59,55 @@ aside {
 .min-600{
   min-height: 600px;
 }
+
+
+/* Carousel base class */
+.carousel {
+  min-height: 500px;
+  height: 100%;
+  margin-bottom: 60px;
+}
+/* Since positioning the image, we need to help out the caption */
+.carousel-caption {
+  z-index: 10;
+}
+
+/* Declare heights because of positioning of img element */
+.carousel .item {
+  height: 600px;
+  background-color: #777;
+}
+.carousel-inner > .item > img {
+  position: absolute;
+  top: -280px;
+  left: 0;
+  min-width: 100%;
+}
+
+.customThumb {
+  height: 200px !important;
+  width: 200px !important;
+}
+
+.customCol{
+  padding-right:0px;
+}
+
+.noPadding{
+  padding-right:0px;
+  padding-left:0px;
+}
+a:hover,a:focus{
+  text-transform: none !important;
+}
+
+.tableThumb{
+  width:200px;
+  height:300px;
+}
+
+IMG.img-centered {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}

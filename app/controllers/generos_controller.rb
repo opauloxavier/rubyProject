@@ -15,7 +15,9 @@ class GenerosController < ApplicationController
       render 'new'
     end
   end
-
+  def index
+    @genero=Genero.find_each
+  end
   private
     def genero_params
       params.require(:generos).permit(:name)

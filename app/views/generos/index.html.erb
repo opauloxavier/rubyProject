@@ -1,0 +1,26 @@
+<%= provide(:title, "Todos os Gêneros");%>
+<div class="col-md-12">
+  <legend>Todos os Gêneros</legend>
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-striped text-center" >
+      <tr>
+        <th class="text-center"> Gênero </th>
+        <th class="text-center"> Avaliação Média </th>
+        <th class="text-center"> Favorito </th>
+      </tr>
+      <% @genero.each do |genero| %>
+      <tr>
+        <td><%=genero.name%></a></td>
+        <td> <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        </td>
+        <td><a href='#' class='btn btn-danger'><i class='glyphicon glyphicon-heart'></i></a>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>

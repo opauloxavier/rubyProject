@@ -1,6 +1,7 @@
 <% if @user.errors.any? %>
     <div id="error_explanation">
-      <div class="alert alert-danger">
+      <div class="alert alert-danger alert-dismissable">
+        <button class="close" aria-hidden="true" data-dismiss="alert" name="buttonAlert" type="button">×</button>
         Esse formulário possui <%= pluralize(@user.errors.count, "erro") %>.
       </div>
       <ul>

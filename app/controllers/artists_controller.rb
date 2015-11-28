@@ -5,6 +5,8 @@ class ArtistsController < ApplicationController
   def show
     @artist = Artist.find_by name: params[:name]
     @genero = Genero.find(@artist.generos_id)
+    @albums = Album.where artists_id: @artist.id
+    @musicas = Musica.where artists_id: @artist.id
   end
   def create
     @artist = Artist.new(artist_params)
@@ -15,6 +17,9 @@ class ArtistsController < ApplicationController
       flash[:danger] = "Algo deu errado! Tente novamente"
       render 'new'
     end
+  end
+  def index
+    @artist=Artist.find_each
   end
 
   private

@@ -7,6 +7,8 @@ Rails.application.routes.draw do
   resources :users
   resources :generos
   resources :artists, param: :name
+  resources :albums
+  resources :musicas
   root 'static_pages#home'
 
   get 'home' => 'static_pages#home'

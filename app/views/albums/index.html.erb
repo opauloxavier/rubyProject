@@ -1,0 +1,28 @@
+<%= provide(:title, "Todos os Albuns");%>
+<div class="col-md-12">
+  <legend>Todos os Álbuns</legend>
+  <div class="col-md-10 col-md-offset-1">
+    <table class="table table-striped text-center" >
+      <tr>
+        <th class="text-center"> Nome do Álbum </th>
+        <th class="text-center"> Nome do Artista </th>
+        <th class="text-center"> Avaliação Média </th>
+        <th class="text-center"> Favorito </th>
+      </tr>
+      <% @albums.each do |album| %>
+      <tr>
+        <td><%=album.name%></a></td>
+        <td><%=Artist.find(album.artists_id).name%></a></td>
+        <td> <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        <span class='glyphicon glyphicon-star'></span>
+        </td>
+        <td><a href='#' class='btn btn-danger'><i class='glyphicon glyphicon-heart'></i></a>
+        </td>
+      </tr>
+    <% end %>
+    </table>
+  </div>
+</div>

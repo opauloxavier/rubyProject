@@ -5,7 +5,7 @@
   <div class="col-md-6 col-md-offset-3">
     <div class="row"  style="margin-bottom:25px;">
       <%= gravatar_for @user %>
-      <a href="http://gravatar.com/emails" target="_blank">change</a>
+      <a href="http://gravatar.com/emails" target="_blank">Alterar</a>
     </div>
     <%= form_for(@user) do |f| %>
         <%= render 'shared/error_messages' %>
@@ -16,13 +16,13 @@
         <%= f.label :email %>
         <%= f.email_field :email, class: 'form-control' %>
 
-        <%= f.label :password %>
+        <%= f.label "Senha" %>
         <%= f.password_field :password, class: 'form-control' %>
 
-        <%= f.label :password_confirmation, "Confirmation" %>
+        <%= f.label :password_confirmation, "Confirmaçao" %>
         <%= f.password_field :password_confirmation, class: 'form-control' %>
 
-        <%= f.submit "Save changes", class: "btn btn-primary pull-right", style:"margin-top:10px;" %>
+        <%= f.submit "Salvar Alterações", class: "btn btn-primary pull-right", style:"margin-top:10px;" %>
     <% end %>
 
 

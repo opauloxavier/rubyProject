@@ -1,0 +1,19 @@
+<% provide(:title, "Cadastrar Album")%>
+<h3 class="text-center">Cadastrar Album</h3>
+<div class="row">
+  <div class="col-md-6 col-md-offset-3 min-600">
+    <%= form_for(:albums, url:albums_path) do |f| %>
+        <%= f.label "Nome do Album" %>
+        <%= f.text_field :name, class: 'form-control' %>
+
+        <%= f.label "Ano do Album" %>
+        <%= f.number_field :ano, in: 1900..2100, step:1, class: 'form-control' %>
+
+        <%= f.label "Cantor" %>
+        <%= f.collection_select :artists_id, Artist.order(:name),:id,:name, {}, include_blank: "Selecione um artista", class: "form-control" %>
+
+        <%= f.submit 'Cadastrar Album', class: "btn btn-primary pull-right", style:"margin-top:10px;"%>
+
+    <% end %>
+  </div>
+</div>
